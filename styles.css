@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&family=Orbitron:wght@400..900&family=Silkscreen:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #06283d;
+  --secondary-color: #5892e9;
+  --tertiary-color: #47B5FF;
+  --text-color: #DFF6FF;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: "Iceland", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-color);
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 2rem;
+}
+
+#navbar {
+  background-color: var(--primary-color);
+  position: sticky;
+  top: 0;
+  
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 0.5rem;
+
+}
+
+
+#navbar li {
+  list-style: none;
+  padding: 0.5rem 1.2rem;
+  margin: 0.2rem;
+  text-transform: capitalize;
+  border: 1px solid transparent;
+
+}
+
+#navbar li:hover {
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#welcome-section {
+  height: 57vh;
+  width: 100%;
+  
+}
+
+#video, #overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#video {
+  object-fit: cover;
+  z-index: -10;
+}
+
+#overlay {
+  z-index: -5;
+  background-color: var(--tertiary-color);
+  mix-blend-mode: overlay;
+}
+
+#container {
+  text-align: center;
+  margin: 35vh auto;
+  width: max-content;
+}
+
+#container h1 {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: capitalize;
+  font-size: 6rem;
+  color: var(--primary-color);
+
+  @media only screen and (max-width: 900px) {
+    font-size: 4rem;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 3rem;
+  }
+}
+
+hr {
+  border: 1px solid  var(--primary-color);
+  margin: 5px 0;
+}
+
+#container span {
+  color: var(--primary-color);
+  text-transform: capitalize;
+  font-size: 4rem;
+  font-weight: bold;
+  
+  @media only screen and (max-width: 900px) {
+    font-size: 2.5rem;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 2rem;
+  }
+}
+
+#projects {
+  padding: 12rem 0;
+  /* background: linear-gradient( var(--text-color), var(--tertiary-color), var(--secondary-color)); */
+
+  background-color: var(--secondary-color);
+
+  animation: color 5s ease-in-out infinite;
+
+}
+
+#project-section {
+  padding: 1rem;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  gap: 3rem;
+  text-align: center;
+  margin: 3rem auto;
+}
+
+#project-tile {
+  width: min-content;
+  /* background-color: var(--primary-color); */
+  padding: 30px 10px;
+  border-radius: 20px;
+  background: radial-gradient(circle, var(--secondary-color), var(--primary-color));
+ 
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+.project-title {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 10px;
+}
+
+.image {
+  width: 250px;
+  height: 150px;
+  margin: 5px;
+  object-fit: cover;
+}
+
+#project-tile p {
+  margin: 10px 0;
+}
+
+#profile-link {
+  /* background-color: var(--primary-color); */
+  display: block;
+  text-align: center;
+  margin: auto;
+  max-width: max-content;
+  padding: 7px 15px;
+  border-radius: 15px;
+
+  background: radial-gradient(circle, var(--secondary-color) 0%, var(--primary-color) 30%);
+
+  animation: btn 1s ease-in infinite;
+}
+
+#contact {
+  height: 100px;
+  background-color: var(--primary-color);
+  margin-top: 2rem;
+}
+
+@keyframes btn {
+  0% {
+
+  }
+  12% {
+    background: radial-gradient(circle, var(--secondary-color) 0%, var(--primary-color) 60%);
+  }
+  24% {
+    background: radial-gradient(circle, var(--secondary-color) 0%, var(--primary-color) 90%);
+  }
+  36% {
+    background: radial-gradient(circle, var(--secondary-color) 0%, var(--primary-color) 200%);
+  }
+  52% {
+    background: radial-gradient(circle, var(--primary-color) 0%, var(--secondary-color) 30%, var(--primary-color) 200%);
+  }
+  64% {
+    background: radial-gradient(circle, var(--primary-color) 0%, var(--secondary-color) 40%);
+  }
+  76% {
+    background: radial-gradient(circle, var(--primary-color) 0%, var(--secondary-color) 90%);
+  }
+  88% {
+    background: radial-gradient(circle, var(--primary-color) 0%, var(--secondary-color) 200%);
+  }
+  100% {
+   
+  }
+  
+}
+
+
+@keyframes project {
+  0% {
+
+  }
+  25% {
+    background: linear-gradient( var(--tertiary-color), var(--text-color), var(--secondary-color));
+  }
+  50% {
+    background: linear-gradient( var(--secondary-color), var(--tertiary-color), var(--text-color));
+  }
+  75% {
+    background: linear-gradient( var(--tertiary-color), var(--secondary-color), var(--text-color));
+  }
+  100% {
+    
+  }
+}
+
+
+@keyframes color {
+  0% {
+
+  }
+  20% {
+    background-color: var(--secondary-color);
+  }
+  40% {
+    background-color: var(--tertiary-color);
+  }
+  60% {
+    background-color: var(--text-color);
+  }
+  80% {
+    background-color: var(--tertiary-color);
+  }
+  100% {
+    
+  }
+}
